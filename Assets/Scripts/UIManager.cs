@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,38 +10,38 @@ public class UIManager : MonoBehaviour
 
 
     [Header("Panels")]
-    public GameObject panelNameTheFlag;
-    public GameObject panelFlagTheName;
-    public GameObject panelScoreboard;
-    public Transform panelStatsSpacer;
-    public GameObject panelPlayerStatsPrefab;
-    public GameObject panelGetreadyPlayer;
-    public TextMeshProUGUI textGetReadyPlayer;
+    [SerializeField] private GameObject panelNameTheFlag;
+    [SerializeField] private GameObject panelFlagTheName;
+    [SerializeField] private GameObject panelScoreboard;
+    [SerializeField] private Transform panelStatsSpacer;
+    [SerializeField] private GameObject panelPlayerStatsPrefab;
+    [SerializeField] private GameObject panelGetreadyPlayer;
+    [SerializeField] private TextMeshProUGUI textGetReadyPlayer;
 
     [Header("Flags")]
     private int countFlagsFromTheTop;
-    public List<Flag> allFlags;
-    public List<Flag> currentFlags;
-    public GameObject flagObjectPrefab;
-    public Transform flagSpacerPanel;
+    [SerializeField] private List<Flag> allFlags;
+    [SerializeField] private List<Flag> currentFlags;
+    [SerializeField] private GameObject flagObjectPrefab;
+    [SerializeField] private Transform flagSpacerPanel;
 
     private GameObject currentFlagObject;
     private Flag currentFlag;
 
-    public GameObject panelAnswerSelectionButtons;
-    public List<Flag> wrongFlags = new List<Flag>(3);
-    public List<GameObject> buttonsAnswersAvailable;
+    [SerializeField] private GameObject panelAnswerSelectionButtons;
+    [SerializeField] private List<Flag> wrongFlags = new List<Flag>(3);
+    [SerializeField] private List<GameObject> buttonsAnswersAvailable;
 
     // Flag the name
-    public Button[] flagButtons;
-    public TextMeshProUGUI textCurrentCountry;
-    private string currentCountry;
+    [SerializeField] private Button[] flagButtons;
+    [SerializeField] private TextMeshProUGUI textCurrentCountry;
+    [SerializeField] private string currentCountry;
 
     [Header("Stats")]
-    public TextMeshProUGUI textPlayer;
-    public TextMeshProUGUI textSession;
-    public TextMeshProUGUI textTotalScore;
-    public TextMeshProUGUI textTimer;
+    [SerializeField] private TextMeshProUGUI textPlayer;
+    [SerializeField] private TextMeshProUGUI textSession;
+    [SerializeField] private TextMeshProUGUI textTotalScore;
+    [SerializeField] private TextMeshProUGUI textTimer;
 
     private float currentAnswerTime;
     private float totalAnswerTime;
@@ -51,7 +50,7 @@ public class UIManager : MonoBehaviour
     public bool isSessionEnded;
     private bool startTimer;
     private int currentsession = 0;
-    [SerializeField]
+
     private int totalSession = 15;
     private int currentScore;
     private int totalScore;

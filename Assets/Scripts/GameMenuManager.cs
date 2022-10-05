@@ -8,17 +8,17 @@ public class GameMenuManager : MonoBehaviour
 {
     public static GameMenuManager INSTANCE;
 
-    public GameObject panelMainBackground;
-    public GameObject panelGameMenu;
-    public GameObject panelOptions;
-    public GameObject panelSelectPlayerAmount;
-    public GameObject panelEnterPlayerInfo;
-    public GameObject panelGamePlay;
-    public GameObject panelRegions;
-    public GameObject buttonBackToMain;
-    public GameObject buttonRegionAccept;
-    public GameObject textTitle;
-    public GameObject textVersion;
+    [SerializeField]private GameObject panelMainBackground;
+    [SerializeField] private GameObject panelGameMenu;
+    [SerializeField] private GameObject panelOptions;
+    [SerializeField] private GameObject panelSelectPlayerAmount;
+    [SerializeField] private GameObject panelEnterPlayerInfo;
+    [SerializeField] private GameObject panelGamePlay;
+    [SerializeField] private GameObject panelRegions;
+    [SerializeField] private GameObject buttonBackToMain;
+    [SerializeField] private GameObject buttonRegionAccept;
+    [SerializeField] private GameObject textTitle;
+    [SerializeField] private GameObject textVersion;
 
     public Transform panelPlayerAmountSpacer;
     public TMP_InputField inputFieldPlayerNamePrefab;
